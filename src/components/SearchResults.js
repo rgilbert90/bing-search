@@ -1,4 +1,5 @@
 import React from 'react';
+import SearchResult from './SearchResult';
 
 const SearchResults = ({results}) => {
   if (!results) {
@@ -7,16 +8,10 @@ const SearchResults = ({results}) => {
 
   const renderedList = results.map((article) => {
     return (
-      <a href={article.url}>
-        <li>
-          <div key={article.name}>
-          {article.name}
-          </div>
-        </li>
-      </a>
+      <div><SearchResult article={article}/></div>
     );
   });
-  return <ul>{renderedList}</ul>;
+  return renderedList;
 };
 
 export default SearchResults;

@@ -1,0 +1,7 @@
+.color {
+  max-width: 7000px;
+}
+
+:local(.screenBG) {
+  background: blue;
+}

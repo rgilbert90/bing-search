@@ -1,5 +1,5 @@
 import React from 'react';
-import './App.css';
+import '../App.css';
 
 class SearchBar extends React.Component {
   state = { term: '' };
@@ -19,10 +19,9 @@ class SearchBar extends React.Component {
   render() {
     return (
       <div>
-        <div><img className="google" src="/images/google.png"></img></div>
         <form onSubmit={this.onFormSubmit}>
           <input
-            className="search"
+            style={this.props.layout}
             type="text"
             value={this.state.term}
             onChange={this.onInputChange}
