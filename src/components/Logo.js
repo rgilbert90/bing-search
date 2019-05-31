@@ -1,9 +1,9 @@
 import React from 'react';
 
-const Logo = (props) => {
+const Logo = ({ layout, onClick }) => {
   return (
-    <div>
-      <img style={props.layout} src="/images/google.png"></img>
+    <div onClick={onClick}>
+      <img style={layout} src="/images/google.png"></img>
     </div>
   );
 };

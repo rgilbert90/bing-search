@@ -15,7 +15,11 @@ class App extends React.Component {
     });
     this.setState({results: response.data.value, showResults: true});
 
-  }
+  };
+
+  reset = () => {
+    this.setState({showResults: false});
+  };
 
   render() {
     if (this.state.showResults) {
@@ -23,6 +27,7 @@ class App extends React.Component {
         <ResultsScreen 
           onTermSubmit={this.onTermSubmit}
           results={this.state.results}
+          reset={this.reset}
         />
       );
     };

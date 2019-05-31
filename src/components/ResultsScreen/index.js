@@ -52,11 +52,12 @@ const formLayout = {
   width: "100%",
 }
 
-const ResultsScreen = ({ onTermSubmit, results }) => {
+const ResultsScreen = ({ onTermSubmit, results, reset }) => {
+  
   return (
     <div>
       <div style={logoWrapper}>
-      <div><Logo layout={logo} /></div>
+      <Logo layout={logo} onClick={reset}/>
       <div style={searchBarWrapper}>
         <SearchBar layout={searchBar} onFormSubmit={onTermSubmit} buttonLayout={searchButton} formLayout={formLayout}/>
         </div>
