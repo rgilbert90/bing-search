@@ -12,13 +12,15 @@ const logo = {
 
 const searchBar = {
   margin: "0 auto",
-  width: "600px",
+  maxWidth: "600px",
+  width: "100%",
   height: "30px",
   display: "flex",
   fontSize: "1em",
   borderRadius: "30px",
   padding: "10px",
   border: "1px solid #dfe1e5",
+  flexGrow: "5",
 };
 
 const logoWrapper = {
@@ -28,8 +30,27 @@ const logoWrapper = {
 
 const searchBarWrapper = {
   padding: "25px",
+  width: "600px",
+  display: "flex",
+  justifyContent: "flex-start",
+  
 }
 
+const searchButton = {
+  margin: "0 auto 0 15px",
+  fontSize: "14px",
+  backgroundColor: "#f2f2f2",
+  border: "1px solid #f2f2f2",
+  borderRadius: "4px",
+  fontFamily: "arial",
+  padding: "10px 0 ",
+  width: "200px",
+}
+
+const formLayout = {
+  display: "flex",
+  width: "100%",
+}
 
 const ResultsScreen = ({ onTermSubmit, results }) => {
   return (
@@ -37,7 +58,7 @@ const ResultsScreen = ({ onTermSubmit, results }) => {
       <div style={logoWrapper}>
       <div><Logo layout={logo} /></div>
       <div style={searchBarWrapper}>
-        <SearchBar layout={searchBar} onFormSubmit={onTermSubmit}/>
+        <SearchBar layout={searchBar} onFormSubmit={onTermSubmit} buttonLayout={searchButton} formLayout={formLayout}/>
         </div>
       </div>
       <div>

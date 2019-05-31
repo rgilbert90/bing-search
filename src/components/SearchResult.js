@@ -1,7 +1,7 @@
 import React from 'react';
 
 const resultsWrapper = {
-  margin: "0 120px",
+  margin: "0 60px",
   fontFamily: "Roboto",
 };
 
